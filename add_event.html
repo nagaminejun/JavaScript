@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <metacharset="utf8">
+  </head>
+  <body>
+    <button type="button">
+      <span>spanボタン</span>
+      ボタン
+    </button>
+    <a href="https://example.com">リンク</a>
+    <script>
+      function confirmLink(event) {
+        if (confirm('ページ遷移しますか？')) {
+          console.log('実行しました');
+        } else {
+          event.preventDefault();
+          console.log('キャンセルしました');
+        }
+      }
+      const link = document.querySelector('a');
+      link.addEventListener('click',confirmLink);
+    </script>
+  </body>
+</html>
